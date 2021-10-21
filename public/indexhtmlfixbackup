@@ -1,0 +1,398 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>DOCUChain</title>
+    <script src="bundle.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container">
+          <div class="font">
+            <h2><b>DOCU</b>Chain</h2>
+          </div>
+      </div>
+  </nav>
+    <div class="container">
+
+<div class="row">
+    <!-- Awal Side Form -->
+    <div class="col-md-4 order-md-2 mb-4">
+        <h4 class="mb-3"><strong>Hapus Dokumen</strong></h4>
+  
+      <form id="delete" class="card p-2">
+        <div class="input-group">
+          <input id="delete-id" type="text" class="form-control" placeholder="Nomor Dokumen">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary btn-md my-0 ml-0">Hapus</button>
+          </div>
+        </div>
+      </form>
+      <p id="delete-result"></p>
+  
+      <br>
+  
+        <h4 class="mb-3"><strong>Hapus verifikator</strong></h4>
+  
+      <form id="delete-verifikator" class="card p-2">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Nomor Dokumen">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary btn-md my-0 ml-0">Submit</button>
+          </div>
+        </div>
+      </form>
+      <p id="delete-verifikator-result"></p>
+  
+      <hr>
+  
+      <h4 class="mb-3"><strong>Cari Dokumen</strong></h4>
+  
+      <form id="read" class="card p-2">
+        <div class="input-group">
+          <input input id="read-id" type="text" class="form-control" placeholder="Nomor Dokumen">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary btn-md my-0 ml-0">Cari</button>
+          </div>
+        </div>
+      </form>
+      <p id="read-result"></p>
+
+      <br>
+      <h4 class="mb-3"><strong>Cari Verifikator</strong></h4>
+  
+      <form id="read-verifikator" class="card p-2">
+        <div class="input-group">
+          <input input id="read-id" type="text" class="form-control" placeholder="Nomor Dokumen">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary btn-md my-0 ml-0">Cari</button>
+          </div>
+        </div>
+      </form>
+      <p id="read-verifikator-result"></p>
+    </div>
+
+    <hr>
+   <!-- Akhir Side Form  -->
+        <div class="col-md-8 order-md-1">
+
+ <!-- Awal Input Dokumen -->
+    <h4 class="mb-3"><strong>Input Dokumen</strong></h4>
+    <form id="create" class="needs-validation" novalidate>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="name">Nomor Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+           Masukkan Nomor Dokumen!
+          </div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="name">Nama Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan Nama Dokumen!
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="md-form md-outline my-2">
+          <input id="name" type="text" class="form-control"required>
+          <label for="username">Nama Pembuat Dokumen</label>
+        </div>
+        <div class="invalid-feedback">
+          Masukkan Nama Pembuat Dokumen!
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="email">Unit Pembuat Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan Unit Pembuat Dokumen!
+          </div>
+        </div>
+
+        <div class="col-12 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="address">NIP Pembuat Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan NIP Pembuat Dokumen!
+          </div>
+        </div>
+
+        <div class="col-12 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="address">Nama Penanda Tangan Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan Nama Penanda Tangan Dokumen!
+          </div>
+        </div>
+
+        <div class="col-12 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="date" class="form-control" required>
+            <label for="address">Tanggal Tanda Tangan Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan Tanggal Tanda Tangan Dokumen!
+          </div>
+        </div>
+
+      <button class="btn btn-primary btn-lg btn-block" type="submit">Input Dokumen!</button>
+      <hr class="mb-4">
+      <p id="create-result"></p>
+    </form>
+  </div>
+<!-- Akhir Input Dokumen -->
+
+          <hr>
+
+ <!-- Awal Input Verifikator -->
+    <h4 class="mb-3"><strong>Input Verifikator</strong></h4>
+    <form id="create-verifikator" class="needs-validation" novalidate>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="name">Nomor Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+           Masukkan Nomor Dokumen!
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="name">Nama Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan Nama Dokumen!
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="md-form md-outline my-2">
+          <input id="name" type="text" class="form-control"required>
+          <label for="username">Nama Verifikator</label>
+        </div>
+        <div class="invalid-feedback">
+          Masukkan Nama Verifikator!
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="email">Unit Verifikasi</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan Unit Verifikasi!
+          </div>
+        </div>
+
+        <div class="col-12 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="address">NIP Verifikator</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan NIP Verifikator!
+          </div>
+        </div>
+
+        <div class="col-12 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="date" class="form-control" required>
+            <label for="address">Tanggal Verifikasi</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan Tanggal Verifikasi Dokumen!
+          </div>
+        </div>
+
+      <button class="btn btn-primary btn-lg btn-block" type="submit">Input Verifikator!</button>
+      <hr class="mb-4">
+      <p id="create-verifikator-result"></p>
+    </form>
+  </div>
+<!-- Akhir Input Verifikator -->
+
+
+          <hr>
+
+ <!-- Awal Edit Dokumen -->
+    <h4 class="mb-3"><strong>Edit Dokumen</strong></h4>
+    <form id="edit" class="needs-validation" novalidate>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="name">Nomor Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+           Masukkan Nomor Dokumen!
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="name">Nama Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan Nama Dokumen!
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="md-form md-outline my-2">
+          <input id="name" type="text" class="form-control"required>
+          <label for="username">Nama Pembuat Dokumen</label>
+        </div>
+        <div class="invalid-feedback">
+          Masukkan Nama Pembuat Dokumen!
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="email">Unit Pembuat Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan Unit Pembuat Dokumen!
+          </div>
+        </div>
+
+        <div class="col-12 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="address">NIP Pembuat Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan NIP Pembuat Dokumen!
+          </div>
+        </div>
+
+        <div class="col-12 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="address">Nama Penanda Tangan Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan Nama Penanda Tangan Dokumen!
+          </div>
+        </div>
+
+        <div class="col-12 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="date" class="form-control" required>
+            <label for="address">Tanggal Tanda Tangan Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan Tanggal Tanda Tangan Dokumen!
+          </div>
+        </div>
+
+      <button class="btn btn-primary btn-lg btn-block" type="submit">Edit Dokumen!</button>
+      <hr class="mb-4">
+      <p id="edit-result"></p>
+    </form>
+  </div>
+<!-- Akhir Edit Dokumen -->
+
+          <hr>
+
+ <!-- Awal Edit Verifikator -->
+    <h4 class="mb-3"><strong>Edit Verifikator</strong></h4>
+    <form id="edit-verifikator" class="needs-validation" novalidate>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="name">Nomor Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+           Masukkan Nomor Dokumen!
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="name">Nama Dokumen</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan Nama Dokumen!
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="md-form md-outline my-2">
+          <input id="name" type="text" class="form-control"required>
+          <label for="username">Nama Verifikator</label>
+        </div>
+        <div class="invalid-feedback">
+          Masukkan Nama Verifikator!
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="email">Unit Verifikasi</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan Unit Verifikasi!
+          </div>
+        </div>
+
+        <div class="col-12 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="text" class="form-control" required>
+            <label for="address">NIP Verifikator</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan NIP Verifikator!
+          </div>
+        </div>
+
+        <div class="col-12 mb-3">
+          <div class="md-form md-outline my-2">
+            <input id="name" type="date" class="form-control" required>
+            <label for="address">Tanggal Verifikasi</label>
+          </div>
+          <div class="invalid-feedback">
+            Masukkan Tanggal Verifikasi Dokumen!
+          </div>
+        </div>
+
+      <button class="btn btn-primary btn-lg btn-block" type="submit">Edit Verifikator!</button>
+      <hr class="mb-4">
+      <p id="edit-verifikator-result"></p>
+    </form>
+  </div>
+<!-- Akhir Edit Verifikator -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

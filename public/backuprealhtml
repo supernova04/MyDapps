@@ -1,0 +1,227 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>DOCUChain</title>
+    <script src="bundle.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container">
+          <div class="font">
+            <h2><b>DOCU</b>Chain</h2>
+          </div>
+      </div>
+  </nav>
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-sm-12">
+
+          <form id="create">
+            <h2>Tambah Dokumen</h2>
+            <div class="form-row">
+              <div class="col">
+                <label for="name">Nomor Dokumen</label>
+                <input id="name" type="text" class="form-control"></input>
+            </div>
+                <div class="col">
+                    <label for="name">Nama Dokumen</label>
+                    <input id="name" type="text" class="form-control"></input>
+                </div>
+                <div class="col">
+                    <label for="name">Nama Pembuat Dokumen</label>
+                    <input id="name" type="text" class="form-control"></input>
+                </div>
+                <div class="col">
+                    <label for="name">Unit Pembuat Dokumen</label>
+                    <input id="name" type="text" class="form-control"></input>
+                </div>
+                <div class="col">
+                  <label for="name">NIP Pembuat Dokumen</label>
+                  <input id="name" type="text" class="form-control"></input>
+              </div>
+              <div class="col">
+                <label for="name">Nama Penanda Tangan Dokumen</label>
+                <input id="name" type="text" class="form-control"></input>
+            </div>
+            <div class="col">
+              <label for="name">Tanggal Tanda Tangan Dokumen</label>
+              <input id="name" type="date" class="form-control"></input>
+          </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="spinner-border" role="status" id="loader"style="display: none;">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <p id="create-result"></p>
+          </form>
+
+          <hr>
+
+          <form id="create-verifikator">
+            <h2>Tambah Verifikator</h2>
+            <div class="form-row">
+              <div class="col">
+                <label for="name">Nomor Dokumen</label>
+                <input id="name" type="text" class="form-control"></input>
+            </div>
+                <div class="col">
+                    <label for="name">Nama Dokumen</label>
+                    <input id="name" type="text" class="form-control"></input>
+                </div>
+                <div class="col">
+                    <label for="name">Nama Verifikator</label>
+                    <input id="name" type="text" class="form-control"></input>
+                </div>
+                <div class="col">
+                    <label for="name">Unit Verifikator</label>
+                    <input id="name" type="text" class="form-control"></input>
+                </div>
+                <div class="col">
+                  <label for="name">NIP Verifikator</label>
+                  <input id="name" type="text" class="form-control"></input>
+              </div>
+            <div class="col">
+              <label for="name">Tanggal Verifikasi</label>
+              <input id="name" type="date" class="form-control"></input>
+          </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="spinner-border" role="status" id="loader"style="display: none;">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <p id="create-verifikator-result"></p>
+          </form>
+
+          <hr>
+
+          <form id="read">
+            <h2>Cari Dokumen</h2>
+            <div class="form-group">
+              <label for="read-id">Nomor Dokumen</label>
+              <input id="read-id" type="text" class="form-control"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <p id="read-result"></p>
+          </form>
+
+          <hr>
+
+          <form id="read-verifikator">
+            <h2>Cari Verifikator</h2>
+            <div class="form-group">
+              <label for="read-id">Nomor Dokumen</label>
+              <input id="read-id" type="text" class="form-control"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <p id="read-verifikator-result"></p>
+          </form>
+
+          <hr>
+
+          <form id="edit">
+            <h2>Edit Dokumen</h2>
+            <div class="form-row">
+              <div class="col">
+                <label for="name">Nomor Dokumen</label>
+                <input id="name" type="text" class="form-control"></input>
+            </div>
+                <div class="col">
+                    <label for="name">Nama Dokumen</label>
+                    <input id="name" type="text" class="form-control"></input>
+                </div>
+                <div class="col">
+                    <label for="name">Nama Pembuat Dokumen</label>
+                    <input id="name" type="text" class="form-control"></input>
+                </div>
+                <div class="col">
+                    <label for="name">Unit Pembuat Dokumen</label>
+                    <input id="name" type="text" class="form-control"></input>
+                </div>
+                <div class="col">
+                  <label for="name">NIP Pembuat Dokumen</label>
+                  <input id="name" type="text" class="form-control"></input>
+              </div>
+              <div class="col">
+                <label for="name">Nama Penanda Tangan Dokumen</label>
+                <input id="name" type="text" class="form-control"></input>
+            </div>
+            <div class="col">
+              <label for="name">Tanggal Tanda Tangan Dokumen</label>
+              <input id="name" type="date" class="form-control"></input>
+          </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="spinner-border" role="status" id="loader"style="display: none;">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <p id="edit-result"></p>
+          </form>
+
+          <hr>
+
+          <form id="edit-verifikator">
+            <h2>Edit Verifikator</h2>
+            <div class="form-row">
+              <div class="col">
+                <label for="name">Nomor Dokumen</label>
+                <input id="name" type="text" class="form-control"></input>
+            </div>
+                <div class="col">
+                    <label for="name">Nama Dokumen</label>
+                    <input id="name" type="text" class="form-control"></input>
+                </div>
+                <div class="col">
+                    <label for="name">Nama Verifikator</label>
+                    <input id="name" type="text" class="form-control"></input>
+                </div>
+                <div class="col">
+                    <label for="name">Unit Verifikator</label>
+                    <input id="name" type="text" class="form-control"></input>
+                </div>
+                <div class="col">
+                  <label for="name">NIP Verifikator</label>
+                  <input id="name" type="text" class="form-control"></input>
+              </div>
+            <div class="col">
+              <label for="name">Tanggal Verifikasi</label>
+              <input id="name" type="date" class="form-control"></input>
+          </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="spinner-border" role="status" id="loader"style="display: none;">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <p id="edit-verifikator-result"></p>
+          </form>
+
+          <hr>
+
+          <form id="delete">
+            <h2>Hapus Dokumen</h2>
+            <div class="form-group">
+              <label for="delete-id">Nomor Dokumen</label>
+              <input id="delete-id" type="text" class="form-control"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <p id="delete-result"></p>
+          </form>
+
+          <hr>
+
+          <form id="delete-verifikator">
+            <h2>Hapus Verifikator</h2>
+            <div class="form-group">
+              <label for="delete-id">Nomor Dokumen</label>
+              <input id="delete-id" type="text" class="form-control"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <p id="delete-verifikator-result"></p>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

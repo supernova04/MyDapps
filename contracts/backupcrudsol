@@ -1,0 +1,108 @@
+pragma solidity ^0.5.16;
+
+
+contract Crud {
+     struct Document {
+        string id;
+        string docsname;
+        string docscreator;
+        string creatorunit;
+        string creatorid;
+        string docssignname;
+        string docssigndate;
+    }
+
+//==========================================//
+    Document[] public document;
+    uint256 docsincId = 1;
+//==========================================//
+    event AddDocs(string id,
+        string docsname,
+        string docscreator,
+        string creatorunit,
+        string creatorid,
+        string docssignname,
+        string docssigndate);
+//=====================================//
+    event UpdateDocs(string id,
+        string docsname,
+        string docscreator,
+        string creatorunit,
+        string creatorid,
+        string docssignname,
+        string docssigndate);
+//============================================//
+    event DeleteDocsId(string id);
+//===========================================//    
+    function insertDocs(string memory id,
+        string memory docsname,
+        string memory docscreator,
+        string memory creatorunit,
+        string memory creatorid,
+        string memory docssignname,
+        string memory docssigndate) public {
+        document.push(Document(id, docsname, docscreator, creatorunit, creatorid, docssignname, docssigndate));
+        docsincId++;
+
+        emit AddDocs(id, docsname, docscreator, creatorunit, creatorid, docssignname, docssigndate);
+    }
+//==========================================//
+
+    function readDocsById(string memory id) public view returns (string memory documentnewid,
+        string memory docsname,
+        string memory docscreator,
+        string memory creatorunit,
+        string memory creatorid,
+        string memory docssignname,
+        string memory docssigndate){
+        for(uint256 i = 0; i < docsincId; i++){
+            if(strcmp(document[i].id, id)){
+                return(document[i].id, document[i].docsname, document[i].docscreator, document[i].creatorunit, document[i].creatorid, document[i].docssignname, document[i].docssigndate);
+            }
+        }
+        revert('Document not found');
+    }
+//==========================================//
+
+    function updateDocsById(string memory id,
+        string memory docsname,
+        string memory docscreator,
+        string memory creatorunit,
+        string memory creatorid,
+        string memory docssignname,
+        string memory docssigndate) public returns(bool success) {
+        for(uint256 i = 0; i < docsincId; i++){
+            if(strcmp(document[i].id, id)){
+              document[i].id; 
+              document[i].docsname;
+              document[i].docscreator;
+              document[i].creatorunit;
+              document[i].creatorid;
+              document[i].docssignname;
+              document[i].docssigndate;
+
+              emit UpdateDocs(id, docsname, docscreator, creatorunit, creatorid, docssignname, docssigndate);
+              return true;
+            }
+        }
+        return false;
+    }
+//==========================================//
+
+    function DeleteDocsById(string memory id) public returns(bool success){
+        for(uint256 i = 0; i < docsincId; i++){
+            if(strcmp(document[i].id, id)){
+              delete document[i];
+              emit DeleteDocsId(id);
+              return true;
+           }
+       }
+       return false;
+   }
+//==========================================//
+
+
+    function strcmp(string memory a, string memory b)  internal pure returns (bool){
+       return keccak256(abi.encodePacked(a)) == keccak256(abi.encodePacked(b));
+   }
+}
